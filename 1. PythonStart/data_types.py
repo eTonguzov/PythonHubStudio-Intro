@@ -1,3 +1,4 @@
+#Типы данных в Python
 a= None  #Тип данных NoneType
 print(type(a))
 ################
