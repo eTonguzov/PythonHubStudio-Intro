@@ -16,11 +16,11 @@ def volume():
     h = height()
     s = PI*r**2
     v = s * h
+
     return v
-def massa(g):
+#print("Volume cylinder: ",  volume(), "cm3")
+
+def massa(v):#на вход принимается объем цилиндра(причем здесь абсолютно не важно имя переменной на вход)
     n = float(input("Enter massa 1 g/cm3: "))
-    return g*r/1000
- print("Massa cylynder in kg ". massa(volume))
-
-
-# print("Volume cylinder: ",  volume(), "cm3")
+    return v*n/1000
+print("Massa cylynder in kg ", massa(volume()))
