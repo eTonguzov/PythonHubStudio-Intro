@@ -18,7 +18,7 @@ def volume():
     v = s * h
 
     return v
-#print("Volume cylinder: ",  volume(), "cm3")
+print("Volume cylinder: ",  volume(), "cm3")
 
 def massa(v):#на вход принимается объем цилиндра(причем здесь абсолютно не важно имя переменной на вход)
     n = float(input("Enter massa 1 g/cm3: "))
