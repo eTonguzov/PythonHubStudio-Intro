@@ -1,34 +1,47 @@
 import random
-razn = 0
-print("Введи читсло от 1 до 10")
-rand_num = random.randint(1,10)#Генерируем числа от 1 до 10
-# print(rand_num)
-my_num = int(input())# Вводим свое число
-# print(my_num, rand_num)
-if(my_num==rand_num):
-    print("Угадал")
-elif(my_num>rand_num):
-    razn = my_num-rand_num
-else: razn = rand_num - my_num
-# print(razn)
 
-if(razn>=3):
-    print("Холодно, попробуй заново:")
-    new_my_num = int(input())
-    if(new_my_num==rand_num):
-        print("Даа, ты угадал")
-    else: print("Неверно, извини попыток брольше нет")# здесь нужно реализовать завершение программы
-if (razn == 2):
-        print("Прохладно, попробуй заново:")
-        new_my_num = int(input())
-        if (new_my_num == rand_num):
-            print("Даа, ты угадал")
+print("Привет, давай поиграем в игру!\nЯ загадаю число от [0 до 10] И ты попытаешься его угадать")
+
+def get_user_num():
+    while True:
+        try:
+            user_num = int(input("Введи целое (int) число которое ты загадал\n"))
+
+        except ValueError:
+            print("Извини, так не пойдет, введи заново")
+
+
+        if user_num<0:
+            print("Вы ввели отрицательное число")
+            continue
         else:
-            print("Неверно, извини попыток брольше нет")  # здесь нужно реализовать завершение программы
-if (razn == 1):
-        print("Горячо, попробуй заново:")
-        new_my_num = int(input())
-        if (new_my_num == rand_num):
-            print("Даа, ты угадал")
-        else:
-            print("Извини попыток брольше нет")  # здесь нужно реализовать завершение программы
+            break
+    return user_num
+
+ran_num = random.randint(0,10)
+get_user_num()
+print(get_user_num())
+
+
+
+# count_try = 10
+# print('У тебя будет', count_try, 'попыток')
+# while count_try>0:
+#     while count_try!=ran_num:
+#         if count_try>ran_num:
+#             razn = count_try-ran_num
+#             if razn > 3:
+#                 print("Холодно")
+#             elif razn==2:
+#                 print('Тепло')
+#             else: print("Горячо")
+#         if count_try<ran_num:
+#             razn = ran_num-count_try
+#             if razn > 3:
+#                 print("Холодно")
+#             elif razn==2:
+#                 print('Тепло')
+#             else: print("Горячо")
+
+
+print(ran_num)
